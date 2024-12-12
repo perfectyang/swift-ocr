@@ -18,6 +18,8 @@
 		17E7A4142BF251A000D57731 /* KeyboardShortcutSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7A4132BF251A000D57731 /* KeyboardShortcutSettingsView.swift */; };
 		17E7A4172BF2561D00D57731 /* MenubarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7A4162BF2561D00D57731 /* MenubarContentView.swift */; };
 		17E7A4192BF258F100D57731 /* MenubarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7A4182BF258F100D57731 /* MenubarSettingsView.swift */; };
+		B09A21D12D0A97FC00E17A4C /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A21D02D0A97FC00E17A4C /* Recognizer.swift */; };
+		B09A21D32D0A984A00E17A4C /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A21D22D0A984A00E17A4C /* Detector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		17E7A4132BF251A000D57731 /* KeyboardShortcutSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutSettingsView.swift; sourceTree = "<group>"; };
 		17E7A4162BF2561D00D57731 /* MenubarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarContentView.swift; sourceTree = "<group>"; };
 		17E7A4182BF258F100D57731 /* MenubarSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarSettingsView.swift; sourceTree = "<group>"; };
+		B09A21D02D0A97FC00E17A4C /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
+		B09A21D22D0A984A00E17A4C /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				17E7A4002BF20DD200D57731 /* ScreencaptureViewModel.swift */,
+				B09A21D02D0A97FC00E17A4C /* Recognizer.swift */,
+				B09A21D22D0A984A00E17A4C /* Detector.swift */,
 			);
 			path = "view model";
 			sourceTree = "<group>";
@@ -160,7 +166,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					17E7A3EB2BF208FA00D57731 = {
 						CreatedOnToolsVersion = 15.3;
@@ -210,7 +216,9 @@
 				17E7A4192BF258F100D57731 /* MenubarSettingsView.swift in Sources */,
 				17E7A3F22BF208FA00D57731 /* ContentView.swift in Sources */,
 				17E7A4072BF24A5B00D57731 /* Keyboardshortcuts+Global.swift in Sources */,
+				B09A21D32D0A984A00E17A4C /* Detector.swift in Sources */,
 				17E7A4142BF251A000D57731 /* KeyboardShortcutSettingsView.swift in Sources */,
+				B09A21D12D0A97FC00E17A4C /* Recognizer.swift in Sources */,
 				17E7A4012BF20DD200D57731 /* ScreencaptureViewModel.swift in Sources */,
 				17E7A3F02BF208FA00D57731 /* ScreenshotAppApp.swift in Sources */,
 			);
@@ -253,6 +261,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -316,6 +325,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -346,8 +356,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenshotApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 54YLWD89Z8;
+				DEVELOPMENT_TEAM = PTDZDDYCXE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -373,8 +384,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenshotApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 54YLWD89Z8;
+				DEVELOPMENT_TEAM = PTDZDDYCXE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

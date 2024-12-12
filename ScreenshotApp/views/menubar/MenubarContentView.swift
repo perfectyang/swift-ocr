@@ -14,11 +14,8 @@ struct MenubarContentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Text("Your Screenshots")
-                    .font(.title2)
-                
                 if !vm.images.isEmpty {
-                    Button("Clear All") {
+                    Button("清理") {
                         vm.images = []
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -38,7 +35,7 @@ struct MenubarContentView: View {
                     }
                 }
             }
-            .frame(minHeight: 50, maxHeight: 200)
+            .frame(minHeight: 50, maxHeight: 600)
             
             Divider()
                 .padding(.horizontal, -15)
@@ -47,20 +44,20 @@ struct MenubarContentView: View {
                 Button(action: {
                     vm.takeScreenshot(for: .area)
                 }, label: {
-                    Label("Area", systemImage: "rectangle.center.inset.filled.badge.plus")
+                    Label("截图22", systemImage: "rectangle.center.inset.filled.badge.plus")
                 })
                 .keyboardShortcut(.defaultAction)
                 
                 Button(action: {
                     vm.takeScreenshot(for: .window)
                 }, label: {
-                    Label("Window", systemImage: "macwindow")
+                    Label("截窗口", systemImage: "macwindow")
                 })
                 
                 Button(action: {
                     vm.takeScreenshot(for: .full)
                 }, label: {
-                    Label("Full Screen", systemImage: "macbook.gen2")
+                    Label("截全屏", systemImage: "macbook.gen2")
                 })
                 
                 SettingsLink()
@@ -69,7 +66,7 @@ struct MenubarContentView: View {
             .frame(maxWidth: .infinity)
             
         }
-        .frame(minWidth: 350)
+        .frame(minWidth: 500)
         .padding()
     }
 }
