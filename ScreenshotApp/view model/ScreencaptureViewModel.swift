@@ -40,7 +40,7 @@ class ScreencaptureViewModel: ObservableObject {
 
    init() {
        KeyboardShortcuts.onKeyUp(for: .translate) { [self] in
-           print("翻译")
+           self.pasteImage()
        }
         KeyboardShortcuts.onKeyUp(for: .screenshotCapture) { [self] in
             self.takeScreenshot(for: .area)
@@ -84,11 +84,29 @@ class ScreencaptureViewModel: ObservableObject {
     }
     
     
-   private func getImageFromPasteboard() {
-        guard NSPasteboard.general.canReadItem(withDataConformingToTypes: NSImage.imageTypes) else { return }
+    private func pasteImage() {
+        let task = Process()
+        task.executableURL = URL(fileURLWithPath: "/usr/sbin/screencapture")
+        task.arguments = ["-cs"]
         
-        guard let image =  NSImage(pasteboard: NSPasteboard.general) else { return }
-       
+        do {
+            try task.run()
+            task.waitUntilExit()
+            guard NSPasteboard.general.canReadItem(withDataConformingToTypes: NSImage.imageTypes) else { return }
+            guard let image =  NSImage(pasteboard: NSPasteboard.general) else { return }
+            let pasteboard = NSPasteboard.general
+            pasteboard.declareTypes([.tiff], owner: nil)
+            if let tiffData = image.tiffRepresentation {
+                pasteboard.setData(tiffData, forType: .tiff)
+            }
+        } catch {
+            print("could not take screenshot: \(error)")
+        }
+     }
+
+   private func getImageFromPasteboard() {
+       guard NSPasteboard.general.canReadItem(withDataConformingToTypes: NSImage.imageTypes) else { return }
+       guard let image =  NSImage(pasteboard: NSPasteboard.general) else { return }
        if let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) {
            // 现在您有一个 CGImage 对象
               Task {

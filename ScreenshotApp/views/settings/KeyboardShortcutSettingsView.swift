@@ -13,12 +13,12 @@ struct KeyboardShortcutSettingsView: View {
         Form {
             KeyboardShortcuts.Recorder("识别文字:",
                                        name: .screenshotCapture)
+            KeyboardShortcuts.Recorder("截图:",
+                                       name: .translate)
             KeyboardShortcuts.Recorder("识别窗体文字:",
                                        name: .screenshotCaptureWindow)
             KeyboardShortcuts.Recorder("识别全屏文字:",
                                        name: .screenshotCaptureFull)
-            KeyboardShortcuts.Recorder("翻译:",
-                                       name: .translate)
         }
         .padding()
     }
