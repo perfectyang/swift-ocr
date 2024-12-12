@@ -14,10 +14,6 @@ struct MenubarSettingsView: View {
         Form {
             Toggle("show menu bar extra", isOn: $menuBarExtraIsInserted)
         }
-        
-        SettingsView()
-        if (menuBarExtraIsInserted) {
-        }
     }
 }
 

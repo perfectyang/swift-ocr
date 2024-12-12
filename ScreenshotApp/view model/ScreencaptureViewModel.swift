@@ -39,9 +39,9 @@ class ScreencaptureViewModel: ObservableObject {
    @Published var images = [NSImage]()
 
    init() {
-        KeyboardShortcuts.onKeyUp(for: .cutImage) { [self] in
-            self.takeScreenshot(for: .area)
-        }
+       KeyboardShortcuts.onKeyUp(for: .translate) { [self] in
+           print("翻译")
+       }
         KeyboardShortcuts.onKeyUp(for: .screenshotCapture) { [self] in
             self.takeScreenshot(for: .area)
         }

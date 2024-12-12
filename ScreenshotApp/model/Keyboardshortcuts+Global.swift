@@ -16,6 +16,6 @@ extension KeyboardShortcuts.Name {
                                         default: .init(.four, modifiers: [.option, .command]))
     static let screenshotCaptureFull = Self("screenshotCaptureFull",
                                         default: .init(.five, modifiers: [.option, .command]))
-    static let cutImage = Self("cutImage",
-                               default: .init(.f6))
+    static let translate = Self("translate",
+                                default: .init(.five, modifiers: [.option, .command]))
 }

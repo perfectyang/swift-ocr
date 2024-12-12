@@ -44,7 +44,7 @@ struct MenubarContentView: View {
                 Button(action: {
                     vm.takeScreenshot(for: .area)
                 }, label: {
-                    Label("截图22", systemImage: "rectangle.center.inset.filled.badge.plus")
+                    Label("截图", systemImage: "rectangle.center.inset.filled.badge.plus")
                 })
                 .keyboardShortcut(.defaultAction)
                 

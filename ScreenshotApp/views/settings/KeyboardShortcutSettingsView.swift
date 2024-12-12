@@ -11,12 +11,14 @@ import KeyboardShortcuts
 struct KeyboardShortcutSettingsView: View {
     var body: some View {
         Form {
-            KeyboardShortcuts.Recorder("Screenshot Area:", 
+            KeyboardShortcuts.Recorder("识别文字:",
                                        name: .screenshotCapture)
-            KeyboardShortcuts.Recorder("Screenshot Window:", 
+            KeyboardShortcuts.Recorder("识别窗体文字:",
                                        name: .screenshotCaptureWindow)
-            KeyboardShortcuts.Recorder("Screenshot Full Screen:", 
+            KeyboardShortcuts.Recorder("识别全屏文字:",
                                        name: .screenshotCaptureFull)
+            KeyboardShortcuts.Recorder("翻译:",
+                                       name: .translate)
         }
         .padding()
     }
