@@ -103,6 +103,7 @@ class ScreencaptureViewModel: ObservableObject {
             print("could not take screenshot: \(error)")
         }
      }
+    
 
    private func getImageFromPasteboard() {
        guard NSPasteboard.general.canReadItem(withDataConformingToTypes: NSImage.imageTypes) else { return }
@@ -110,10 +111,14 @@ class ScreencaptureViewModel: ObservableObject {
        if let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) {
            // 现在您有一个 CGImage 对象
               Task {
-                let fastResult = await Recognizer.detect(image: cgImage, level: .fast)
-                  showResult(fastResult)
+//                let fastResult = await Recognizer.detect(image: cgImage, level: .fast)
+//                  showResult(fastResult)
                 let accurateResult = await Recognizer.detect(image: cgImage, level: .accurate)
                   showResult(accurateResult)
+                
+//                let translator = Translator("https://libretranslate.com")
+//                  let translation = try await translator.translate("我是大帅哥", from: "zh", to: "en")
+//                  print(translation)
               }
        } else {
            print("无法将 NSImage 转换为 CGImage")

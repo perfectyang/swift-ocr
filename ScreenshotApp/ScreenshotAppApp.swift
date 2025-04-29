@@ -17,7 +17,8 @@ struct ScreenshotAppApp: App {
         MenuBarExtra("Screenshots", 
                      systemImage: "photo.badge.plus",
                      isInserted: $menuBarExtraIsInserted) {
-            SettingsView()
+            MenubarContentView(vm: vm)
+//                        SettingsView()
         }
         .menuBarExtraStyle(.window)
         

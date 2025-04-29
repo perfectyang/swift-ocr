@@ -20,6 +20,9 @@
 		17E7A4192BF258F100D57731 /* MenubarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7A4182BF258F100D57731 /* MenubarSettingsView.swift */; };
 		B09A21D12D0A97FC00E17A4C /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A21D02D0A97FC00E17A4C /* Recognizer.swift */; };
 		B09A21D32D0A984A00E17A4C /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A21D22D0A984A00E17A4C /* Detector.swift */; };
+		B09A21D52D0BE65800E17A4C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A21D42D0BE65800E17A4C /* Menu.swift */; };
+		B09A220E2D0FC58800E17A4C /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A220D2D0FC58800E17A4C /* Translator.swift */; };
+		B09A22102D0FC5A800E17A4C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A220F2D0FC5A800E17A4C /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		17E7A4182BF258F100D57731 /* MenubarSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarSettingsView.swift; sourceTree = "<group>"; };
 		B09A21D02D0A97FC00E17A4C /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
 		B09A21D22D0A984A00E17A4C /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		B09A21D42D0BE65800E17A4C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B09A220D2D0FC58800E17A4C /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		B09A220F2D0FC5A800E17A4C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 				17E7A4002BF20DD200D57731 /* ScreencaptureViewModel.swift */,
 				B09A21D02D0A97FC00E17A4C /* Recognizer.swift */,
 				B09A21D22D0A984A00E17A4C /* Detector.swift */,
+				B09A220D2D0FC58800E17A4C /* Translator.swift */,
+				B09A220F2D0FC5A800E17A4C /* Language.swift */,
 			);
 			path = "view model";
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				17E7A4162BF2561D00D57731 /* MenubarContentView.swift */,
+				B09A21D42D0BE65800E17A4C /* Menu.swift */,
 			);
 			path = menubar;
 			sourceTree = "<group>";
@@ -212,11 +221,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				17E7A4122BF2519200D57731 /* SettingsView.swift in Sources */,
+				B09A220E2D0FC58800E17A4C /* Translator.swift in Sources */,
 				17E7A4172BF2561D00D57731 /* MenubarContentView.swift in Sources */,
 				17E7A4192BF258F100D57731 /* MenubarSettingsView.swift in Sources */,
 				17E7A3F22BF208FA00D57731 /* ContentView.swift in Sources */,
 				17E7A4072BF24A5B00D57731 /* Keyboardshortcuts+Global.swift in Sources */,
+				B09A21D52D0BE65800E17A4C /* Menu.swift in Sources */,
 				B09A21D32D0A984A00E17A4C /* Detector.swift in Sources */,
+				B09A22102D0FC5A800E17A4C /* Language.swift in Sources */,
 				17E7A4142BF251A000D57731 /* KeyboardShortcutSettingsView.swift in Sources */,
 				B09A21D12D0A97FC00E17A4C /* Recognizer.swift in Sources */,
 				17E7A4012BF20DD200D57731 /* ScreencaptureViewModel.swift in Sources */,

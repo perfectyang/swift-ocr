@@ -27,3 +27,5 @@ struct KeyboardShortcutSettingsView: View {
 #Preview {
     KeyboardShortcutSettingsView()
 }
+
+
